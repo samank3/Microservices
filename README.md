@@ -3,6 +3,7 @@
 ## Geo: 
 
 Given two points on Earth, this service returns the geodesic distance between them. This service will be used later by a shopping cart application to estimate the drone delivery time. Each point is specified using its latitude (t) and longitude (n) expressed as signed decimal degrees with East of Greenwich being a negative longitude and south of the Equator being a negative latitude. The distance (in km) between two such points is given by:
+
 `12742 * atan2[sqrt(X), sqrt(1-X)]
 where X = sin2[(t2-t1)/2] + Y * sin2[(n2-n1)/2]
 and Y = cos(t1) * cos(t2)`
